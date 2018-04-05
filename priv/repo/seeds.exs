@@ -9,3 +9,7 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+#
+Hello.Repo.delete_all Hello.Coherence.User
+Hello.Coherence.User.changeset(%Hello.Coherence.User{}, %{name: "Test User", email: "testuser@example.com", password: "secret", password_confirmation: "secret"})
+|> Hello.Repo.insert!

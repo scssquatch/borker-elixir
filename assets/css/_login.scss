@@ -1,0 +1,104 @@
+.login-pane {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.comm-content {
+  max-width: 440px;
+
+  .comm-item {
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 48px auto;
+    position: relative;
+  }
+}
+
+.splash-background {
+  background-image: url("/images/disgusted.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-block {
+  left: calc(50% - 350px / 2 - 20px);
+  width: auto;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+
+  .forgot {
+    color: #AAB8C2;
+    font-size: 14px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .login-input {
+    width: 210px;
+    margin-right: 12px;
+
+    .form-control, .btn {
+      font-size: 14px;
+      height: 46px;
+      padding: 12px;
+      margin-top: 12px;
+    }
+
+    .btn {
+      border-radius: 100px;
+    }
+  }
+}
+
+.signup-block {
+  max-width: 350px;
+
+  .signup-title {
+    font-size: 27px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+
+  .signup-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .signup-input {
+    width: 350px;
+    margin-right: 12px;
+
+    .form-control, .btn {
+      font-size: 14px;
+      height: 46px;
+      padding: 12px;
+      margin-top: 12px;
+    }
+
+  }
+
+  .get-started {
+    margin: 16px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-size: 14px;
+    }
+
+    .btn {
+      border-radius: 100px;
+    }
+  }
+}

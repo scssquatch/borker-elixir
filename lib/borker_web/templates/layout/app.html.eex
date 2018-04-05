@@ -7,20 +7,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Hello!</title>
+    <title>Borker. It's what's happening.</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="icon" type="image/x-icon" href="<%= static_path(@conn, "/images/favicon.ico") %>">
   </head>
 
   <body>
-    <div class="container">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
+    <div class="container-fluid fill p-0">
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
-
-    </div> <!-- /container -->
+    </div>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

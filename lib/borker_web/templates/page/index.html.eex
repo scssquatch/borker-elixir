@@ -1,36 +1,70 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
-
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
+<div class="row fill">
+  <div class="col p-0 splash-background login-pane">
+    <div class="comm-content">
+      <div class="comm-item">
+        <span class="fa fa-search mr-3"></span>
+        Bork your interests.
+      </div>
+      <div class="comm-item">
+        <span class="fa fa-group mr-3"></span>
+        Hear what people are borking about.
+      </div>
+      <div class="comm-item">
+        <span class="fa fa-comment-o mr-3"></span>
+        Join the borkersation.
+      </div>
+    </div>
   </div>
-
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
+  <div class="col p-0 login-pane">
+    <div class="login-block">
+      <form>
+        <div class="input-group">
+          <div class="login-input">
+            <input class="form-control" type="text" name="username" placeholder="Phone, email, or username">
+          </div>
+          <div class="group-password">
+            <div class="login-input">
+              <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <div>
+              <a class="forgot" href="/reset_password">Forgot password?</a>
+            </div>
+          </div>
+          <div class="login-input">
+            <input type="submit" class="btn btn-outline-primary" value="Log In"></input>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="signup-block">
+      <div class="signup-header">
+        <img src="<%= static_path(@conn, "/images/borker.png") %>" height="50px">
+      </div>
+      <h1 class="signup-title">
+        See what’s borkening in the world right now
+      </h1>
+      <h2 class="signup-subtitle mb-3 mt-3">
+        Join Borker today.
+      </h2>
+      <div class="signup-form">
+        <form>
+          <div class="signup-input">
+            <input class="form-control" type="text" name="username" placeholder="Phone or email">
+          </div>
+          <div class="signup-input">
+            <input class="form-control" type="password" name="password" placeholder="Password">
+          </div>
+          <div class="get-started">
+            <button type="button" class="btn btn-primary">Get Started</button>
+            <div>
+              <p>
+                Have an account?
+                <a href="/login">Log In</a>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>

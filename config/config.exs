@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :hello,
-  ecto_repos: [Hello.Repo]
+config :borker,
+  ecto_repos: [Borker.Repo]
 
 # Configures the endpoint
-config :hello, HelloWeb.Endpoint,
+config :borker, BorkerWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "RSFkVZRSP/t3PtpIoaZKBO3In0qldQ6QOBikRI6UZVLzmptETorJtjabQ7fsnZdQ",
-  render_errors: [view: HelloWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Hello.PubSub,
+  render_errors: [view: BorkerWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Borker.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
@@ -28,18 +28,18 @@ import_config "#{Mix.env}.exs"
 
 # %% Coherence Configuration %%   Don't remove this line
 config :coherence,
-  user_schema: Hello.Coherence.User,
-  repo: Hello.Repo,
-  module: Hello,
-  web_module: HelloWeb,
-  router: HelloWeb.Router,
-  messages_backend: HelloWeb.Coherence.Messages,
+  user_schema: Borker.Coherence.User,
+  repo: Borker.Repo,
+  module: Borker,
+  web_module: BorkerWeb,
+  router: BorkerWeb.Router,
+  messages_backend: BorkerWeb.Coherence.Messages,
   logged_out_url: "/",
   email_from_name: "Your Name",
   email_from_email: "yourname@example.com",
   opts: [:authenticatable, :recoverable, :lockable, :trackable, :unlockable_with_token, :invitable, :registerable]
 
-config :coherence, HelloWeb.Coherence.Mailer,
+config :coherence, BorkerWeb.Coherence.Mailer,
   adapter: Swoosh.Adapters.Sendgrid,
   api_key: "your api key here"
 # %% End Coherence Configuration %%

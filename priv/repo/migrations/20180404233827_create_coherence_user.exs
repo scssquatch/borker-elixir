@@ -1,4 +1,4 @@
-defmodule Hello.Repo.Migrations.CreateCoherenceUser do
+defmodule Borker.Repo.Migrations.CreateCoherenceUser do
   use Ecto.Migration
   def change do
     create table(:users) do

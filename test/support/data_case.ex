@@ -1,4 +1,4 @@
-defmodule Hello.DataCase do
+defmodule Borker.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule Hello.DataCase do
 
   using do
     quote do
-      alias Hello.Repo
+      alias Borker.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Hello.DataCase
+      import Borker.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Hello.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Borker.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Hello.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Borker.Repo, {:shared, self()})
     end
 
     :ok

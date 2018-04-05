@@ -1,4 +1,4 @@
-defmodule Hello.Repo.Migrations.CreateCoherenceInvitable do
+defmodule Borker.Repo.Migrations.CreateCoherenceInvitable do
   use Ecto.Migration
   def change do
     create table(:invitations) do

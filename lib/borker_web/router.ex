@@ -38,8 +38,6 @@ defmodule BorkerWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/borker", BorkerController, :index
-    get "/borker/:messenger", BorkerController, :show
   end
 
   scope "/", BorkerWeb do
